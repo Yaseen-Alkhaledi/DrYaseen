@@ -1,64 +1,49 @@
 /*---------------------------------------
-  CUSTOM PROPERTIES ( VARIABLES )             
+  CUSTOM PROPERTIES (VARIABLES)             
 -----------------------------------------*/
 :root {
-  --white-color:                  #FFFFFF;
-  --primary-color:                #247cff;
-  --section-bg-color:             #F9F9F9;
-  --dark-color:                   #000000;
-  --title-color:                  #565758;
-  --p-color:                      #717275;
-  --border-color:                 #eaeaea;
+  --white-color: #ffffff;
+  --primary-color: #247cff;
+  --section-bg-color: #f9f9f9;
+  --dark-color: #000000;
+  --title-color: #565758;
+  --p-color: #717275;
+  --border-color: #eaeaea;
 
-  --body-font-family:             'Open Sans', sans-serif;
+  --body-font-family: 'Open Sans', sans-serif;
 
-  --h1-font-size:                 48px;
-  --h2-font-size:                 36px;
-  --h3-font-size:                 32px;
-  --h4-font-size:                 28px;
-  --h5-font-size:                 24px;
-  --h6-font-size:                 22px;
-  --p-font-size:                  18px;
-  --menu-font-size:               16px;
+  --h1-font-size: 48px;
+  --h2-font-size: 36px;
+  --h3-font-size: 32px;
+  --h4-font-size: 28px;
+  --h5-font-size: 24px;
+  --h6-font-size: 22px;
+  --p-font-size: 18px;
+  --menu-font-size: 16px;
 
-  --font-weight-light:            300;
-  --font-weight-normal:           400;
-  --font-weight-semibold:         600;
-  --font-weight-bold:             700;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
 }
 
+/*---------------------------------------
+  BASE STYLES               
+-----------------------------------------*/
 body {
-    background: var(--white-color);
-    font-family: var(--body-font-family);    
-    position: relative;
-    padding-top: 94px;
+  background: var(--white-color);
+  font-family: var(--body-font-family);
+  position: relative;
+  padding-top: 94px;
 }
 
 /*---------------------------------------
   TYPOGRAPHY               
 -----------------------------------------*/
-
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   color: var(--dark-color);
   line-height: inherit;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
   font-weight: var(--font-weight-semibold);
-}
-
-h1,
-h2 {
-  font-weight: var(--font-weight-bold);
 }
 
 h1 {
@@ -93,8 +78,7 @@ p {
   letter-spacing: 0.5px;
 }
 
-a, 
-button {
+a, button {
   touch-action: manipulation;
   transition: all 0.3s;
 }
@@ -108,6 +92,13 @@ a:hover {
   color: var(--primary-color);
 }
 
+b, strong {
+  font-weight: var(--font-weight-bold);
+}
+
+/*---------------------------------------
+  UTILITY CLASSES               
+-----------------------------------------*/
 .section-padding {
   padding-top: 7rem;
   padding-bottom: 7rem;
@@ -121,17 +112,11 @@ a:hover {
   text-decoration: none;
   border: 1px solid var(--border-color);
   color: var(--primary-color);
-  pointer-events: auto;
   font-weight: var(--font-weight-semibold);
   line-height: 40px;
   position: relative;
   padding: 0 30px;
-  box-sizing: border-box;
   margin: 0;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
   overflow: hidden;
   border-radius: 0;
   text-transform: uppercase;
@@ -143,20 +128,14 @@ a:hover {
   color: var(--primary-color);
   position: absolute;
   top: 100%;
-  bottom: 0;
   left: 0;
-  transition: all 300ms cubic-bezier(0.19, 1, 0.56, 1);
   right: 0;
+  transition: all 300ms cubic-bezier(0.19, 1, 0.56, 1);
   text-align: center;
 }
 
 .custom-link:hover::before {
   top: 0;
-}
-
-b,
-strong {
-  font-weight: var(--font-weight-bold);
 }
 
 /*---------------------------------------
@@ -194,9 +173,6 @@ strong {
 
 .animated-item {
   color: var(--primary-color);
-}
-
-.animated-item {
   display: block;
   opacity: 0;
   overflow: hidden;
@@ -244,10 +220,10 @@ strong {
 }
 
 /*---------------------------------------
-  HERO              
+  HERO SECTION              
 -----------------------------------------*/
-.hero {  
-  padding-top: 0rem;
+.hero {
+  padding-top: 0;
 }
 
 .hero .container {
@@ -271,7 +247,7 @@ strong {
 }
 
 /*---------------------------------------
-  FEATURED              
+  FEATURED SECTION              
 -----------------------------------------*/
 .featured-circle {
   border-radius: 100%;
@@ -332,8 +308,8 @@ strong {
   padding-bottom: 15px;
 }
 
-.navbar-nav .nav-item.active .nav-link, 
-.nav-link:focus, 
+.navbar-nav .nav-item.active .nav-link,
+.nav-link:focus,
 .nav-link:hover {
   color: var(--dark-color);
 }
@@ -363,9 +339,7 @@ strong {
 
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before,
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
-  transition: top 300ms 50ms ease, -webkit-transform 300ms 350ms ease;
   transition: top 300ms 50ms ease, transform 300ms 350ms ease;
-  transition: top 300ms 50ms ease, transform 300ms 350ms ease, -webkit-transform 300ms 350ms ease;
   top: 0;
 }
 
@@ -388,9 +362,7 @@ strong {
 
 .navbar-toggler .navbar-toggler-icon:before,
 .navbar-toggler .navbar-toggler-icon:after {
-  transition: top 300ms 350ms ease, -webkit-transform 300ms 50ms ease;
   transition: top 300ms 350ms ease, transform 300ms 50ms ease;
-  transition: top 300ms 350ms ease, transform 300ms 50ms ease, -webkit-transform 300ms 50ms ease;
   position: absolute;
   right: 0;
   left: 0;
@@ -409,7 +381,7 @@ strong {
 }
 
 /*---------------------------------------
-  Useful Information               
+  TIMELINE SECTION              
 -----------------------------------------*/
 .timeline,
 .timeline-nodes {
@@ -420,10 +392,10 @@ strong {
   flex-direction: row-reverse;
 }
 
-.timeline h3, 
+.timeline h3,
 .timeline p {
   padding: 10px 30px;
-} 
+}
 
 .timeline h3 {
   background: var(--dark-color);
@@ -456,7 +428,7 @@ strong {
 .timeline-nodes:nth-child(odd) .timeline-date {
   text-align: left;
 }
- 
+
 .timeline-nodes:nth-child(even) .timeline-date {
   text-align: right;
 }
@@ -504,9 +476,9 @@ strong {
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translate(-50%,0);
+  transform: translate(-50%, 0);
   background: var(--white-color);
-  box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
   z-index: 1;
 }
 
@@ -520,6 +492,9 @@ strong {
   line-height: 80px;
 }
 
+/*---------------------------------------
+  MEDIA QUERIES              
+-----------------------------------------*/
 @media (max-width: 767px) {
   .timeline-nodes:nth-child(odd) h3,
   .timeline-nodes:nth-child(odd) p {
@@ -604,7 +579,7 @@ strong {
 }
 
 /*---------------------------------------
-  REVIEWS               
+  REVIEWS SECTION              
 -----------------------------------------*/
 .reviews-thumb {
   margin-bottom: 0;
@@ -694,69 +669,64 @@ strong {
   TESTIMONIALS CAROUSEL              
 -----------------------------------------*/
 .testimonials-carousel .owl-nav {
-    position: absolute;
-    bottom: -60px; /* نقل الأسهم إلى أسفل الصور */
-    left: 50%;
-    transform: translateX(-50%); /* توسيط الأسهم أفقيًا */
-    width: auto; /* عرض مناسب للأسهم */
-    display: flex;
-    justify-content: center; /* توسيط الأسهم داخل المساحة */
-    gap: 40px; /* زيادة المسافة بين السهمين */
-    margin-top: 0; /* إزالة الهامش العلوي */
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 0;
 }
 
 .testimonials-carousel .owl-prev,
 .testimonials-carousel .owl-next {
-    background: var(--primary-color) !important;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white-color) !important;
-    font-size: 24px !important;
-    transition: all 0.3s ease;
-    position: static; /* إزالة الوضع النسبي */
+  background: var(--primary-color) !important;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white-color) !important;
+  font-size: 24px !important;
+  transition: all 0.3s ease;
+  position: static;
+  transform: translateY(-5px);
 }
 
-/* لون السهم الأصلي */
-.testimonials-carousel .owl-prev,
-.testimonials-carousel .owl-next {
-    background: var(--primary-color) !important; /* اللون السماوي */
-    transition: background 0.3s ease; /* إضافة انتقال سلس */
-}
-
-/* لون السهم عند التمرير */
 .testimonials-carousel .owl-prev:hover,
 .testimonials-carousel .owl-next:hover {
-    background: var(--dark-color) !important; /* اللون الأسود */
+  background: #1a5bbf !important;
 }
 
-/* لون السهم أثناء النقر (عند الضغط) */
 .testimonials-carousel .owl-prev:active,
 .testimonials-carousel .owl-next:active {
-    background: var(--dark-color) !important; /* اللون الأسود */
+  background: #1a5bbf !important;
 }
 
-/* تغيير رمز السهم الأيسر إلى ← */
-.testimonials-carousel .owl-prev::after {
-    content: '←';
-}
-
-/* تغيير رمز السهم الأيمن إلى → */
-.testimonials-carousel .owl-next::after {
-    content: '→';
-}
-
-/* إزالة الرموز الافتراضية */
 .testimonials-carousel .owl-prev span,
 .testimonials-carousel .owl-next span {
-    display: none;
+  display: none;
+}
+
+.testimonials-carousel .owl-prev::after,
+.testimonials-carousel .owl-next::after {
+  font-family: "bootstrap-icons";
+  font-size: 24px;
+}
+
+.testimonials-carousel .owl-prev::after {
+  content: "\F12F";
+}
+
+.testimonials-carousel .owl-next::after {
+  content: "\F138";
 }
 
 /*---------------------------------------
-  FOOTER              
+  FOOTER SECTION              
 -----------------------------------------*/
 .site-footer {
   background: var(--section-bg-color);
@@ -767,7 +737,7 @@ strong {
 }
 
 /*---------------------------------------
-  SOCIAL ICON               
+  SOCIAL ICON SECTION              
 -----------------------------------------*/
 .social-icon {
   margin: 0;
@@ -799,7 +769,7 @@ strong {
 }
 
 /*---------------------------------------
-  RESPONSIVE STYLES               
+  RESPONSIVE STYLES              
 -----------------------------------------*/
 @media screen and (min-width: 1600px) {
   .hero .container {
@@ -939,5 +909,196 @@ strong {
 
   .timeline::before {
     left: 42px;
+  }
+}
+
+/*---------------------------------------
+  SCROLL TO TOP BUTTON              
+-----------------------------------------*/
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #247cff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, opacity 0.3s;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #1a5bbf;
+}
+
+/*---------------------------------------
+  PRELOADER SECTION              
+-----------------------------------------*/
+:root {
+  --rotate_speed: 1.5s;
+  --ring_background: #247cff;
+  --ball1_background: #00b4d8;
+  --ball2_background: #0096c7;
+  --ball3_background: #0077b6;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  width: 100%;
+  height: 100vh;
+}
+
+.atom {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ring {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border: 10px solid #0077b6;
+  border-radius: 50%;
+  border-color: var(--ring_background);
+  transform-style: preserve-3d;
+}
+
+.ring:nth-child(1) {
+  transform: rotateY(70deg);
+  animation: rotate_ring1 var(--rotate_speed) linear infinite;
+}
+
+.ring:nth-child(2) {
+  transform: rotateY(54deg) rotateX(54deg);
+  animation: rotate_ring2 var(--rotate_speed) linear infinite;
+}
+
+.ring:nth-child(3) {
+  transform: rotateY(-54deg) rotateX(54deg);
+  animation: rotate_ring3 var(--rotate_speed) linear infinite;
+}
+
+.ring::before {
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: #666;
+  border-radius: 50%;
+  top: -15px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.ring:nth-child(1)::before {
+  animation: rotate_ball1 var(--rotate_speed) linear infinite;
+  background-color: var(--ball1_background);
+  box-shadow: 0 0 10px var(--ball1_background),
+    0 0 25px var(--ball1_background),
+    0 0 40px var(--ball1_background);
+}
+
+.ring:nth-child(2)::before {
+  animation: rotate_ball2 var(--rotate_speed) linear infinite;
+  background-color: var(--ball2_background);
+  box-shadow: 0 0 10px var(--ball2_background),
+    0 0 25px var(--ball2_background),
+    0 0 40px var(--ball2_background);
+}
+
+.ring:nth-child(3)::before {
+  animation: rotate_ball3 var(--rotate_speed) linear infinite;
+  background-color: var(--ball3_background);
+  box-shadow: 0 0 10px var(--ball3_background),
+    0 0 25px var(--ball3_background),
+    0 0 40px var(--ball3_background);
+}
+
+#preloader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+@keyframes rotate_ring1 {
+  from {
+    transform: rotateY(70deg) rotateZ(20deg);
+  }
+  to {
+    transform: rotateY(70deg) rotateZ(380deg);
+  }
+}
+
+@keyframes rotate_ring2 {
+  from {
+    transform: rotateY(54deg) rotateX(54deg) rotateZ(-30deg);
+  }
+  to {
+    transform: rotateY(54deg) rotateX(54deg) rotateZ(330deg);
+  }
+}
+
+@keyframes rotate_ring3 {
+  from {
+    transform: rotateY(-54deg) rotateX(54deg) rotateZ(100deg);
+  }
+  to {
+    transform: rotateY(-54deg) rotateX(54deg) rotateZ(460deg);
+  }
+}
+
+@keyframes rotate_ball1 {
+  from {
+    transform: rotateZ(-20deg) rotateY(-70deg);
+  }
+  to {
+    transform: rotateZ(-380deg) rotateY(-70deg);
+  }
+}
+
+@keyframes rotate_ball2 {
+  from {
+    transform: rotateZ(30deg) rotateX(-60deg) rotateY(-60deg);
+  }
+  to {
+    transform: rotateZ(-330deg) rotateX(-60deg) rotateY(-60deg);
+  }
+}
+
+@keyframes rotate_ball3 {
+  from {
+    transform: rotateZ(-100deg) rotateX(-60deg) rotateY(60deg);
+  }
+  to {
+    transform: rotateZ(-460deg) rotateX(-60deg) rotateY(60deg);
   }
 }
