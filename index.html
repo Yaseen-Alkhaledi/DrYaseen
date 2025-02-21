@@ -1,223 +1,53 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <!--أيقونات الموقع-->
-        <link rel="icon" type="image/x-icon" href="images/icon/favicon.ico">
-        <link rel="icon" type="image/png" sizes="32x32" href="images/icon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="images/icon/favicon-16x16.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="images/icon/apple-touch-icon.png">
-        <link rel="manifest" href="site.webmanifest">
-        <link rel="icon" type="image/png" sizes="192x192" href="images/icon/android-chrome-192x192.png">
-        <link rel="icon" type="image/png" sizes="512x512" href="images/icon/android-chrome-512x512.png">
-        
-        <!-- Twitter Cards -->
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="Dr. Yaseen Al-Khalidi's official site">
-        <meta name="twitter:description" content="Dr. Yaseen Al-Khalidi's official website - Medical Laboratory Specialist, Immuno-Virologist, and Microbiology Expert with over 20 years of experience.">
-        <meta name="twitter:image" content="https://yaseen-alkhaledi.github.io/DrYaseen/images/slider/og-image.png">
-
-        <!-- علامات Open Graph لمشاركة الموقع على وسائل التواصل الاجتماعي -->
-        <meta property="og:title" content="Dr. Yaseen Al-Khalidi's official site">
-        <meta property="og:description" content="Dr. Yaseen Al-Khalidi's official website - Medical Laboratory Specialist, Immuno-Virologist, and Microbiology Expert with over 20 years of experience.">
-        <meta property="og:image" content="https://yaseen-alkhaledi.github.io/DrYaseen/images/slider/og-image.png">
-        <meta property="og:url" content="https://yaseen-alkhaledi.github.io/DrYaseen/">
-        <meta property="og:type" content="website">
-        
-        <!-- كود التحقق من Google Search Console -->
-        <meta name="google-site-verification" content="google752b6a0ce1211e8a.html" />
-        
-        <!-- وصف الموقع -->
-        <meta name="description" content="Dr. Yaseen Al-Khalidi's official website - Medical Laboratory Specialist, Immuno-Virologist, and Microbiology Expert with over 20 years of experience.">
-        
-        <!-- عنوان الموقع -->
-        <title>Dr. Yaseen Al-Khalidi's official site</title>
-
-        <!-- CSS FILES -->        
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/bootstrap-icons.css" rel="stylesheet">
-        <link href="css/owl.carousel.min.css" rel="stylesheet">
-        <link href="css/owl.theme.default.min.css" rel="stylesheet">
-        <link href="css/dp.css" rel="stylesheet">
-        
-        <style>
-        /* ملف CSS الخاص بـ Preloader */
-        :root {
-    --rotate_speed: 1.5s;
-    --ring_background: #0077b6;
-    --ball1_background: #00b4d8;
-    --ball2_background: #0096c7;
-    --ball3_background: #0077b6;
-}
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: #ffffff;
-    width: 100%;
-    height: 100vh;
-}
-
-.atom {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.ring {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    border: 10px solid #0077b6;
-    border-radius: 50%;
-    border-color: var(--ring_background);
-    transform-style: preserve-3d;
-}
-
-.ring:nth-child(1) {
-    transform: rotateY(70deg);
-    animation: rotate_ring1 var(--rotate_speed) linear infinite;
-}
-
-.ring:nth-child(2) {
-    transform: rotateY(54deg) rotateX(54deg);
-    animation: rotate_ring2 var(--rotate_speed) linear infinite;
-}
-
-.ring:nth-child(3) {
-    transform: rotateY(-54deg) rotateX(54deg);
-    animation: rotate_ring3 var(--rotate_speed) linear infinite;
-}
-
-.ring::before {
-    position: absolute;
-    content: '';
-    width: 20px;
-    height: 20px;
-    background: #666;
-    border-radius: 50%;
-    top: -15px;
-    left: 0;
-    right: 0;
-    margin: auto;
-}
-
-.ring:nth-child(1)::before {
-    animation: rotate_ball1 var(--rotate_speed) linear infinite;
-    background-color: var(--ball1_background);
-    box-shadow: 0 0 10px var(--ball1_background),
-        0 0 25px var(--ball1_background),
-        0 0 40px var(--ball1_background);
-}
-
-.ring:nth-child(2)::before {
-    animation: rotate_ball2 var(--rotate_speed) linear infinite;
-    background-color: var(--ball2_background);
-    box-shadow: 0 0 10px var(--ball2_background),
-        0 0 25px var(--ball2_background),
-        0 0 40px var(--ball2_background);
-}
-
-.ring:nth-child(3)::before {
-    animation: rotate_ball3 var(--rotate_speed) linear infinite;
-    background-color: var(--ball3_background);
-    box-shadow: 0 0 10px var(--ball3_background),
-        0 0 25px var(--ball3_background),
-        0 0 40px var(--ball3_background);
-}
-
-#preloader-container { /* هذا هو المكان الذي أضفت فيه transition */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white; /* تأكد من أن الخلفية بيضاء */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    opacity: 1; /* ابدأ بقيمة opacity تساوي 1 */
-    transition: opacity 0.5s ease-in-out; /* مدة التلاشي 0.5 ثانية */
-}
-
-@keyframes rotate_ring1 {
-    from {
-        transform: rotateY(70deg) rotateZ(20deg);
-    }
-
-    to {
-        transform: rotateY(70deg) rotateZ(380deg);
-    }
-}
-
-@keyframes rotate_ring2 {
-    from {
-        transform: rotateY(54deg) rotateX(54deg) rotateZ(-30deg);
-    }
-
-    to {
-        transform: rotateY(54deg) rotateX(54deg) rotateZ(330deg);
-    }
-}
-
-@keyframes rotate_ring3 {
-    from {
-        transform: rotateY(-54deg) rotateX(54deg) rotateZ(100deg);
-    }
-
-    to {
-        transform: rotateY(-54deg) rotateX(54deg) rotateZ(460deg);
-    }
-}
-
-@keyframes rotate_ball1 {
-    from {
-        transform: rotateZ(-20deg) rotateY(-70deg);
-    }
-
-    to {
-        transform: rotateZ(-380deg) rotateY(-70deg);
-    }
-}
-
-@keyframes rotate_ball2 {
-    from {
-        transform: rotateZ(30deg) rotateX(-60deg) rotateY(-60deg);
-    }
-
-    to {
-        transform: rotateZ(-330deg) rotateX(-60deg) rotateY(-60deg);
-    }
-}
-
-@keyframes rotate_ball3 {
-    from {
-        transform: rotateZ(-100deg) rotateX(-60deg) rotateY(60deg);
-    }
-
-    to {
-        transform: rotateZ(-460deg) rotateX(-60deg) rotateY(60deg);
-    }
-}
-
-    </style>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <body id="top">
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="images/icon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/icon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icon/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/icon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/icon/android-chrome-512x512.png">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dr. Yaseen Al-Khalidi's Official Site">
+    <meta name="twitter:description" content="Dr. Yaseen Al-Khalidi's official website - Medical Laboratory Specialist, Immuno-Virologist, and Microbiology Expert with over 20 years of experience.">
+    <meta name="twitter:image" content="https://yaseen-alkhaledi.github.io/DrYaseen/images/slider/og-image.png">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Dr. Yaseen Al-Khalidi's Official Site">
+    <meta property="og:description" content="Dr. Yaseen Al-Khalidi's official website - Medical Laboratory Specialist, Immuno-Virologist, and Microbiology Expert with over 20 years of experience.">
+    <meta property="og:image" content="https://yaseen-alkhaledi.github.io/DrYaseen/images/slider/og-image.png">
+    <meta property="og:url" content="https://yaseen-alkhaledi.github.io/DrYaseen/">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="google752b6a0ce1211e8a.html">
+    
+    <!-- Site Description -->
+    <meta name="description" content="Dr. Yaseen Al-Khalidi's official website - Medical Laboratory Specialist, Immuno-Virologist, and Microbiology Expert with over 20 years of experience.">
+    
+    <!-- Site Title -->
+    <title>Dr. Yaseen Al-Khalidi's Official Site</title>
+
+    <!-- CSS Files -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/owl.theme.default.min.css" rel="stylesheet">
+    <link href="css/dp.css" rel="stylesheet">
+</head>
+<body id="top">
+    <!-- Preloader -->
     <div id="preloader-container" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: white; display: flex; justify-content: center; align-items: center; z-index: 9999;">
         <div class="atom">
             <div class="ring"></div>
@@ -226,300 +56,275 @@ body {
         </div>
     </div>
     
-        <main>
-            <nav class="navbar navbar-expand-lg bg-light fixed-top shadow-lg">
-                <div class="container">
-                    <a class="navbar-brand mx-auto d-lg-none" href="index.html">
-                        Dr. Yaseen Alkhaledi
-                        <strong class="d-block">Lab Specialist</strong>
-                    </a>
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" title="Back to Top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+    
+    <main>
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg bg-light fixed-top shadow-lg">
+            <div class="container">
+                <a class="navbar-brand mx-auto d-lg-none" href="index.html">
+                    Dr. Yaseen Alkhaledi
+                    <strong class="d-block">Lab Specialist</strong>
+                </a>
 
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav mx-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#hero">Home</a>
-                            </li>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#hero">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#timeline">Information</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#reviews">Educational Pictures</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#social">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://dr-yaseen-science.blogspot.com/?m=1" target="_blank">Scientific Articles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="images/Dr.Yassin's-CV.pdf" download="Dr.Yassin's-CV.pdf">
+                                <i class="bi bi-download"></i> Download CV
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown" id="languageDropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-translate"></i> Change Language
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="index.html">English</a></li>
+                                <li><a class="dropdown-item" href="infex-ar.html">Arabic</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>        
 
-                            <li class="nav-item">
-                                <a class="nav-link" href="#about">About</a>
-                            </li>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="images/slider/portrait-successful-mid-adult-doctor-with-crossed-arms.webp" class="img-fluid" alt="Dr. Yaseen Al-Khalidi - Medical Specialist" loading="lazy">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/slider/young-asian-female-dentist-white-coat-posing-clinic-equipment.webp" class="img-fluid" alt="Medical Laboratory Equipment" loading="lazy">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/slider/doctor-s-hand-holding-stethoscope-closeup.webp" class="img-fluid" alt="Doctor Holding Stethoscope" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
 
-                            <li class="nav-item">
-                                <a class="nav-link" href="#timeline">Information</a>
-                            </li>
+                        <div class="heroText d-flex flex-column justify-content-center">
+                            <h1 class="mt-auto mb-2">
+                                Better
+                                <div class="animated-info">
+                                    <span class="animated-item">health</span>
+                                    <span class="animated-item">days</span>
+                                    <span class="animated-item">lives</span>
+                                </div>
+                            </h1>
 
-                            <li class="nav-item">
-                                <a class="nav-link" href="#reviews">Educational Pictures</a>
-                            </li>
+                            <p class="mb-4">The Role of Laboratory Tests in Diagnosing and Preventing Chronic Diseases</p>
+                            <p>Laboratory tests play a pivotal role in the early detection of chronic diseases such as diabetes, heart disease, and kidney disorders. Through comprehensive blood tests, cholesterol level checks, and glucose monitoring, potential risk factors can be identified, allowing for preventive measures before conditions worsen. Additionally, these tests help monitor the effectiveness of treatments and adjust them as needed, ultimately improving patients' quality of life.</p>
 
-                            <li class="nav-item">
-                                <a class="nav-link" href="#social">Contact</a>
-                            </li>
-                            
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://dr-yaseen-science.blogspot.com/?m=1" target="_blank">Scientific Articles</a>
-                            </li>
+                            <div class="heroLinks d-flex flex-wrap align-items-center">
+                                <a class="custom-link me-4" href="#about" data-hover="Learn More">Learn More</a>
+                                <p class="contact-phone mb-0"><i class="bi-phone"></i> +967 773224293</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                            <!-- إضافة قسم Download CV مع أيقونة -->
-                            <li class="nav-item">
-                                <a class="nav-link" href="images/Dr.Yassin's-CV.pdf" download="Dr.Yassin's-CV.pdf">
-                                    <i class="bi bi-download"></i> Download CV
-                                </a>
-                            </li>
+        <!-- About Section -->
+        <section class="section-padding" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <h2 class="mb-lg-3 mb-3">About Me</h2>
+                        <p>Dr. Yaseen Al-Khalidi<br>Master’s degree in Microbiology, Medical Laboratory Specialist, and Immuno-Virologist. I hold a Bachelor’s degree in Medical Laboratory Sciences from the University of Baghdad and a Master’s degree in Microbiology from the University of Sana’a. With over twenty years of experience in diagnostic laboratories, I focus on providing accurate and reliable results that aid in diagnosing medical conditions and developing effective treatment plans. I am committed to continuously improving my skills and contributing to enhancing healthcare quality through precise laboratory work.</p>
+                    </div>
 
-                            <!-- قائمة منسدلة لتغيير اللغة -->
-                            <li class="nav-item dropdown" id="languageDropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="bi bi-translate"></i> Change Language
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="index.html">English</a></li>
-                                    <li><a class="dropdown-item" href="infex-ar.html">Arabic</a></li>
-                                </ul>
-                            </li>
+                    <div class="col-lg-4 col-md-5 col-12 mx-auto">
+                        <div class="featured-circle bg-white shadow-lg d-flex justify-content-center align-items-center">
+                            <p class="featured-text"><span class="featured-number">20</span> Years<br> of Experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-6 ps-0">
+                        <img src="images/gallery/medium-shot-man-getting-vaccine.webp" class="img-fluid galleryImage" alt="Get a vaccine" title="Get a vaccine for yourself" loading="lazy">
+                    </div>
+                    <div class="col-lg-6 col-6 pe-0">
+                        <img src="images/gallery/female-doctor-with-presenting-hand-gesture.webp" class="img-fluid galleryImage" alt="Wear a mask" title="Wear a mask to protect yourself" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <img src="images/gallery/yaseen.webp" class="img-fluid galleryImage" alt="Dr. Yaseen Al-Khalidi" title="Dr. Yaseen Al-Khalidi" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section class="section-padding pb-0" id="timeline">
+            <div class="container">
+                <div class="row">
+                    <h2 class="text-center mb-lg-5 mb-4">Useful Information</h2>
+                    <div class="timeline">
+                        <div class="row g-0 justify-content-end justify-content-md-around align-items-start timeline-nodes">
+                            <div class="col-9 col-md-5 me-md-4 me-lg-0 order-3 order-md-1 timeline-content bg-white shadow-lg">
+                                <h3 class="text-light">Early Diagnosis Saves Lives</h3>
+                                <p>More than 70% of medical decisions rely on laboratory test results. Regular check-ups, such as blood and urine tests, help detect diseases early, increasing the chances of recovery. Don’t wait for symptoms to appear—schedule preventive tests regularly.</p>
+                            </div>
+                            <div class="col-3 col-sm-1 order-2 timeline-icons text-md-center">
+                                <i class="bi-patch-check-fill timeline-icon"></i>
+                            </div>
+                            <div class="col-9 col-md-5 ps-md-3 ps-lg-0 order-1 order-md-3 py-4 timeline-date">
+                            </div>
+                        </div>
+
+                        <div class="row g-0 justify-content-end justify-content-md-around align-items-start timeline-nodes my-lg-5 my-4">
+                            <div class="col-9 col-md-5 ms-md-4 ms-lg-0 order-3 order-md-1 timeline-content bg-white shadow-lg">
+                                <h3 class="text-light">Choose Accredited Laboratories</h3>
+                                <p>Accredited medical laboratories ensure accurate results and high-quality service. Make sure the lab you choose follows international standards and uses advanced technologies. This simple step can protect you from diagnostic errors and ensure reliable results.</p>
+                            </div>
+                            <div class="col-3 col-sm-1 order-2 timeline-icons text-md-center">
+                                <i class="bi-book timeline-icon"></i>
+                            </div>
+                            <div class="col-9 col-md-5 pe-md-3 pe-lg-0 order-1 order-md-3 py-4 timeline-date">
+                            </div>
+                        </div>
+
+                        <div class="row g-0 justify-content-end justify-content-md-around align-items-start timeline-nodes">
+                            <div class="col-9 col-md-5 me-md-4 me-lg-0 order-3 order-md-1 timeline-content bg-white shadow-lg">
+                                <h3 class="text-light">Understand Your Test Results</h3>
+                                <p>Test results are not just numbers! Ask your doctor to explain them clearly so you can understand your health status. Knowing the meaning of each test helps you make better health decisions, such as adjusting your diet or lifestyle.</p>
+                            </div>
+                            <div class="col-3 col-sm-1 order-2 timeline-icons text-md-center">
+                                <i class="bi-file-medical timeline-icon"></i>
+                            </div>
+                            <div class="col-9 col-md-5 ps-md-3 ps-lg-0 order-1 order-md-3 py-4 timeline-date">
+                            </div>
+                        </div>
+
+                        <div class="row g-0 justify-content-end justify-content-md-around align-items-start timeline-nodes my-lg-5 my-4">
+                            <div class="col-9 col-md-5 ms-md-4 ms-lg-0 order-3 order-md-1 timeline-content bg-white shadow-lg">
+                                <h3 class="text-light">Preventive Tests: A Global Habit</h3>
+                                <p class="mb-0 pb-0">In developed countries, regular check-ups are a fundamental part of healthcare culture. Adopt this global habit and schedule annual tests to screen for chronic diseases like diabetes and heart conditions.</p>
+                                <p>Prevention is always better than cure.</p>
+                            </div>
+                            <div class="col-3 col-sm-1 order-2 timeline-icons text-md-center">
+                                <i class="bi-globe timeline-icon"></i>
+                            </div>
+                            <div class="col-9 col-md-5 pe-md-3 pe-lg-0 order-1 order-md-3 py-4 timeline-date">
+                            </div>
+                        </div>
+
+                        <div class="row g-0 justify-content-end justify-content-md-around align-items-start timeline-nodes">
+                            <div class="col-9 col-md-5 me-md-4 me-lg-0 order-3 order-md-1 timeline-content bg-white shadow-lg">
+                                <h3 class="text-light">A Personal Tip</h3>
+                                <p>Through my experience in diagnosing diseases, I’ve learned that accuracy starts with proper preparation for tests. Whether you’re dealing with a viral infection or immune disorders, follow your doctor’s instructions carefully (such as fasting or avoiding certain medications) to ensure reliable results. Remember, these simple steps can make the difference between a correct and incorrect diagnosis, and your health always deserves the best possible care.</p>
+                            </div>
+                            <div class="col-3 col-sm-1 order-2 timeline-icons text-md-center">
+                                <i class="bi-person timeline-icon"></i>
+                            </div>
+                            <div class="col-9 col-md-5 ps-md-3 ps-lg-0 order-1 order-md-3 py-4 timeline-date">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section class="section-padding pb-0" id="reviews">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="text-center mb-lg-5 mb-4">Educational Pictures</h2>
+                        <div class="owl-carousel testimonials-carousel">
+                            <div class="testimonial-item">
+                                <img src="images/slider/image1.webp" class="img-fluid testimonial-image" alt="Educational Image 1" loading="lazy">
+                            </div>
+                            <div class="testimonial-item">
+                                <img src="images/slider/image2.webp" class="img-fluid testimonial-image" alt="Educational Image 2" loading="lazy">
+                            </div>
+                            <div class="testimonial-item">
+                                <img src="images/slider/image3.webp" class="img-fluid testimonial-image" alt="Educational Image 3" loading="lazy">
+                            </div>
+                            <div class="testimonial-item">
+                                <img src="images/slider/image4.webp" class="img-fluid testimonial-image" alt="Educational Image 4" loading="lazy">
+                            </div>
+                            <div class="testimonial-item">
+                                <img src="images/slider/image5.webp" class="img-fluid testimonial-image" alt="Educational Image 5" loading="lazy">
+                            </div>
+                            <div class="testimonial-item">
+                                <img src="images/slider/image6.webp" class="img-fluid testimonial-image" alt="Educational Image 6" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section-padding" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-12 ms-auto">
+                        <h5 class="mb-lg-4 mb-3">Contact Info</h5>
+                        <ul class="social-icon" id="social">
+                            <li><a href="https://www.facebook.com/alkhaledi009?mibextid=Ts03S6fpJwRopsAQ" class="social-icon-link bi-facebook" aria-label="Facebook"></a></li>
+                            <li><a href="https://t.me/+967773224293" class="social-icon-link bi-telegram" aria-label="Telegram"></a></li>
+                            <li><a href="https://youtube.com/@alkhaledi009?si=RjgYXgVy6h37zBqj" class="social-icon-link bi-youtube" aria-label="YouTube"></a></li>
+                            <li><a href="https://www.instagram.com/yaseenalkhaledi?igsh=em9iNjI1bzV5MW5j" class="social-icon-link bi-instagram" aria-label="Instagram"></a></li>
+                            <li><a href="https://wa.me/+967773224293" class="social-icon-link bi-whatsapp" aria-label="WhatsApp"></a></li>
+                            <li><a href="https://www.tiktok.com/@dryaseen84?_t=8iSYHyLg88t&_r=1" class="social-icon-link" aria-label="TikTok"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/></svg></a></li>
+                            <li><a href="https://x.com/yaseenalkhaledi" class="social-icon-link" aria-label="Twitter X"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/></svg></a></li>
                         </ul>
                     </div>
-                </div>
-            </nav>        
 
-            <section class="hero" id="hero">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img src="images/slider/portrait-successful-mid-adult-doctor-with-crossed-arms.webp" class="img-fluid" alt="Dr. Yaseen Al-Khalidi - Medical Specialist" loading="lazy">
-                                    </div>
-
-                                    <div class="carousel-item">
-                                        <img src="images/slider/young-asian-female-dentist-white-coat-posing-clinic-equipment.webp" class="img-fluid" alt="Medical Laboratory Equipment" loading="lazy">
-                                    </div>
-
-                                    <div class="carousel-item">
-                                        <img src="images/slider/doctor-s-hand-holding-stethoscope-closeup.webp" class="img-fluid" alt="Doctor Holding Stethoscope" loading="lazy">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="heroText d-flex flex-column justify-content-center">
-                                <h1 class="mt-auto mb-2">
-                                    Better
-                                    <div class="animated-info">
-                                        <span class="animated-item">health</span>
-                                        <span class="animated-item">days</span>
-                                        <span class="animated-item">lives</span>
-                                    </div>
-                                </h1>
-
-                                <p class="mb-4">The Role of Laboratory Tests in Diagnosing and Preventing Chronic Diseases</p>
-                                <p>Laboratory tests play a pivotal role in the early detection of chronic diseases such as diabetes, heart disease, and kidney disorders. Through comprehensive blood tests, cholesterol level checks, and glucose monitoring, potential risk factors can be identified, allowing for preventive measures before conditions worsen. Additionally, these tests help monitor the effectiveness of treatments and adjust them as needed, ultimately improving patients' quality of life.</p>
-
-                                <div class="heroLinks d-flex flex-wrap align-items-center">
-                                    <a class="custom-link me-4" href="#about" data-hover="Learn More">Learn More</a>
-                                    <p class="contact-phone mb-0"><i class="bi-phone"></i> +967 773224293</p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="col-lg-3 col-12 ms-auto mt-4 mt-lg-0">
+                        <p class="copyright-text">All rights reserved © Dr. Yaseen Alkhaledi 2025</p>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
+    </main>
 
-            <section class="section-padding" id="about">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <h2 class="mb-lg-3 mb-3">About Me </h2>
-                            <p>Dr. Yaseen Al-Khalidi<br>Master’s degree in Microbiology, Medical Laboratory Specialist, and Immuno-Virologist. I hold a Bachelor’s degree in Medical Laboratory Sciences from the University of Baghdad and a Master’s degree in Microbiology from the University of Sana’a. With over twenty years of experience in diagnostic laboratories, I focus on providing accurate and reliable results that aid in diagnosing medical conditions and developing effective treatment plans. I am committed to continuously improving my skills and contributing to enhancing healthcare quality through precise laboratory work.</p>
-                        </div>
-
-                        <div class="col-lg-4 col-md-5 col-12 mx-auto">
-                            <div class="featured-circle bg-white shadow-lg d-flex justify-content-center align-items-center">
-                                <p class="featured-text"><span class="featured-number">20</span> Years<br> of Experiences</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="gallery">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 col-6 ps-0">
-                            <img src="images/gallery/medium-shot-man-getting-vaccine.webp" class="img-fluid galleryImage" alt="Get a vaccine" title="Get a vaccine for yourself" loading="lazy">
-                        </div>
-
-                        <div class="col-lg-6 col-6 pe-0">
-                            <img src="images/gallery/female-doctor-with-presenting-hand-gesture.webp" class="img-fluid galleryImage" alt="Wear a mask" title="Wear a mask to protect yourself" loading="lazy">
-                        </div>
-                    </div>
-
-                    <div class="row mt-4">
-                        <div class="col-12">
-                            <img src="images/gallery/yaseen.webp" class="img-fluid galleryImage" alt="Dr. Yaseen Al-Khalidi" title="Dr. Yaseen Al-Khalidi" loading="lazy">
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section-padding pb-0" id="timeline">
-                <div class="container">
-                    <div class="row">
-                        <h2 class="text-center mb-lg-5 mb-4">Useful Information</h2>
-                        <div class="timeline">
-                            <div class="row g-0 justify-content-end justify-content-md-around align-items-start timeline-nodes">
-                                <div class="col-9 col-md-5 me-md-4 me-lg-0 order-3 order-md-1 timeline-content bg-white shadow-lg">
-                                    <h3 class="text-light">Early Diagnosis Saves Lives</h3>
-                                    <p>More than 70% of medical decisions rely on laboratory test results. Regular check-ups, such as blood and urine tests, help detect diseases early, increasing the chances of recovery. Don’t wait for symptoms to appear—schedule preventive tests regularly.</p>
-                                </div>
-
-                                <div class="col-3 col-sm-1 order-2 timeline-icons text-md-center">
-                                    <i class="bi-patch-check-fill timeline-icon"></i>
-                                </div>
-
-                                <div class="col-9 col-md-5 ps-md-3 ps-lg-0 order-1 order-md-3 py-4 timeline-date">
-                                </div>
-                            </div>
-
-                            <div class="row g-0 justify-content-end justify-content-md-around align-items-start timeline-nodes my-lg-5 my-4">
-                                <div class="col-9 col-md-5 ms-md-4 ms-lg-0 order-3 order-md-1 timeline-content bg-white shadow-lg">
-                                    <h3 class="text-light">Choose Accredited Laboratories</h3>
-                                    <p>Accredited medical laboratories ensure accurate results and high-quality service. Make sure the lab you choose follows international standards and uses advanced technologies. This simple step can protect you from diagnostic errors and ensure reliable results.</p>
-                                </div>
-
-                                <div class="col-3 col-sm-1 order-2 timeline-icons text-md-center">
-                                    <i class="bi-book timeline-icon"></i>
-                                </div>
-
-                                <div class="col-9 col-md-5 pe-md-3 pe-lg-0 order-1 order-md-3 py-4 timeline-date">
-                                </div>
-                            </div>
-
-                            <div class="row g-0 justify-content-end justify-content-md-around align-items-start timeline-nodes">
-                                <div class="col-9 col-md-5 me-md-4 me-lg-0 order-3 order-md-1 timeline-content bg-white shadow-lg">
-                                    <h3 class="text-light">Understand Your Test Results</h3>
-                                    <p>Test results are not just numbers! Ask your doctor to explain them clearly so you can understand your health status. Knowing the meaning of each test helps you make better health decisions, such as adjusting your diet or lifestyle.</p>
-                                </div>
-
-                                <div class="col-3 col-sm-1 order-2 timeline-icons text-md-center">
-                                    <i class="bi-file-medical timeline-icon"></i>
-                                </div>
-
-                                <div class="col-9 col-md-5 ps-md-3 ps-lg-0 order-1 order-md-3 py-4 timeline-date">
-                                </div>
-                            </div>
-
-                            <div class="row g-0 justify-content-end justify-content-md-around align-items-start timeline-nodes my-lg-5 my-4">
-                                <div class="col-9 col-md-5 ms-md-4 ms-lg-0 order-3 order-md-1 timeline-content bg-white shadow-lg">
-                                    <h3 class="text-light">Preventive Tests: A Global Habit</h3>
-                                    <p class="mb-0 pb-0">In developed countries, regular check-ups are a fundamental part of healthcare culture. Adopt this global habit and schedule annual tests to screen for chronic diseases like diabetes and heart conditions.</p>
-                                    <p>Prevention is always better than cure.</p>
-                                </div>
-
-                                <div class="col-3 col-sm-1 order-2 timeline-icons text-md-center">
-                                    <i class="bi-globe timeline-icon"></i>
-                                </div>
-
-                                <div class="col-9 col-md-5 pe-md-3 pe-lg-0 order-1 order-md-3 py-4 timeline-date">
-                                </div>
-                            </div>
-
-                            <div class="row g-0 justify-content-end justify-content-md-around align-items-start timeline-nodes">
-                                <div class="col-9 col-md-5 me-md-4 me-lg-0 order-3 order-md-1 timeline-content bg-white shadow-lg">
-                                    <h3 class="text-light">A Personal Tip</h3>
-                                    <p>Through my experience in diagnosing diseases, I’ve learned that accuracy starts with proper preparation for tests. Whether you’re dealing with a viral infection or immune disorders, follow your doctor’s instructions carefully (such as fasting or avoiding certain medications) to ensure reliable results. Remember, these simple steps can make the difference between a correct and incorrect diagnosis, and your health always deserves the best possible care.</p>
-                                </div>
-
-                                <div class="col-3 col-sm-1 order-2 timeline-icons text-md-center">
-                                    <i class="bi-person timeline-icon"></i>
-                                </div>
-
-                                <div class="col-9 col-md-5 ps-md-3 ps-lg-0 order-1 order-md-3 py-4 timeline-date">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section-padding pb-0" id="reviews">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <h2 class="text-center mb-lg-5 mb-4">Educational Pictures</h2>
-                            <div class="owl-carousel testimonials-carousel">
-                                <div class="testimonial-item">
-                                    <img src="images/slider/image1.webp" class="img-fluid testimonial-image" alt="Educational Image 1" loading="lazy">
-                                </div>
-
-                                <div class="testimonial-item">
-                                    <img src="images/slider/image2.webp" class="img-fluid testimonial-image" alt="Educational Image 2" loading="lazy">
-                                </div>
-
-                                <div class="testimonial-item">
-                                    <img src="images/slider/image3.webp" class="img-fluid testimonial-image" alt="Educational Image 3" loading="lazy">
-                                </div>
-
-                                <div class="testimonial-item">
-                                    <img src="images/slider/image4.webp" class="img-fluid testimonial-image" alt="Educational Image 4" loading="lazy">
-                                </div>
-
-                                <div class="testimonial-item">
-                                    <img src="images/slider/image5.webp" class="img-fluid testimonial-image" alt="Educational Image 5" loading="lazy">
-                                </div>
-
-                                <div class="testimonial-item">
-                                    <img src="images/slider/image6.webp" class="img-fluid testimonial-image" alt="Educational Image 6" loading="lazy">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section-padding" id="contact">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6 col-12 ms-auto">
-                            <h5 class="mb-lg-4 mb-3">Contact Info</h5>
-                            <ul class="social-icon" id="social">
-                                <li><a href="https://www.facebook.com/alkhaledi009?mibextid=Ts03S6fpJwRopsAQ" class="social-icon-link bi-facebook" aria-label="Facebook"></a></li>
-                                <li><a href="https://t.me/+967773224293" class="social-icon-link bi-telegram" aria-label="Telegram"></a></li>
-                                <li><a href="https://youtube.com/@alkhaledi009?si=RjgYXgVy6h37zBqj" class="social-icon-link bi-youtube" aria-label="YouTube"></a></li>
-                                <li><a href="https://www.instagram.com/yaseenalkhaledi?igsh=em9iNjI1bzV5MW5j" class="social-icon-link bi-instagram" aria-label="Instagram"></a></li>
-                                <li><a href="https://wa.me/+967773224293" class="social-icon-link bi-whatsapp" aria-label="WhatsApp"></a></li>
-                                <li><a href="https://www.tiktok.com/@dryaseen84?_t=8iSYHyLg88t&_r=1" class="social-icon-link" aria-label="TikTok"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/></svg></a></li>
-                                <li><a href="https://x.com/yaseenalkhaledi" class="social-icon-link" aria-label="Twitter X"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/></svg></a></li>
-                                </ul>
-                        </div>
-
-                        <div class="col-lg-3 col-12 ms-auto mt-4 mt-lg-0">
-                            <p class="copyright-text">All rights reserved © Dr. Yaseen Alkhaledi 2025</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <script>
-        window.addEventListener('load', function() {
-    setTimeout(function() {
-        document.getElementById('preloader-container').style.opacity = '0';
-        setTimeout(function() {
-            document.getElementById('preloader-container').style.display = 'none';
-        }, 500); // نفس مدة التلاشي في CSS (500 ميلي ثانية)
-    }, 3000);
-});
-    </script>
-
-        <!-- JAVASCRIPT FILES -->
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
-        <script src="js/bootstrap.bundle.min.js" defer></script>
-        <script src="js/owl.carousel.min.js" defer></script>
-        <script src="js/scrollspy.min.js" defer></script>
-        <script src="js/custom.js" defer></script>
-    </body>
+    <!-- JavaScript Files -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/owl.carousel.min.js" defer></script>
+    <script src="js/scrollspy.min.js" defer></script>
+    <script src="js/custom.js" defer></script>
+</body>
 </html>
