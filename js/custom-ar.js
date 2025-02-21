@@ -2,7 +2,7 @@
     "use strict";
 
     // NAVBAR
-    $('.navbar-nav .nav-link').click(function(){
+    $('.navbar-nav .nav-link').click(function () {
         // التحقق مما إذا كان العنصر الذي تم النقر عليه هو "تغيير اللغة"
         if (!$(this).hasClass('dropdown-toggle')) {
             $(".navbar-collapse").collapse('hide');
@@ -10,8 +10,8 @@
     });
 
     // إضافة مستمع حدث لعناصر القائمة المنسدلة
-    $(document).ready(function() {
-        $('#languageDropdown .dropdown-item').click(function(event) {
+    $(document).ready(function () {
+        $('#languageDropdown .dropdown-item').click(function (event) {
             // التحقق من الصفحة الحالية والنص الذي تم النقر عليه
             if (window.location.href.includes('infex-ar.html') && $(this).text().trim() === 'العربية') {
                 event.preventDefault(); // منع التحويل إلى صفحة أخرى
@@ -31,18 +31,18 @@
         autoplay: true,
         autoplaySpeed: 300,
         smartSpeed: 500,
-        responsive:{
-          0:{
-            items:1,
-          },
-          768:{
-            items:2,
-            margin: 100,
-          },
-          1280:{
-            items:2,
-            margin: 100,
-          }
+        responsive: {
+            0: {
+                items: 1,
+            },
+            768: {
+                items: 2,
+                margin: 100,
+            },
+            1280: {
+                items: 2,
+                margin: 100,
+            }
         }
     });
 
@@ -69,20 +69,20 @@
     });
 
     // Banner Carousel
-    var myCarousel = document.querySelector('#myCarousel')
+    var myCarousel = document.querySelector('#myCarousel');
     var carousel = new bootstrap.Carousel(myCarousel, {
-      interval: 1500,
-    })
+        interval: 1500,
+    });
 
     // REVIEWS NAVIGATION
-    function ReviewsNavResize(){
-      $(".navbar").scrollspy({ offset: -94 });
+    function ReviewsNavResize() {
+        $(".navbar").scrollspy({ offset: -94 });
 
-      var ReviewsOwlItem = $('.reviews-carousel .owl-item').width();
-      $('.reviews-carousel .owl-nav').css({'width' : (ReviewsOwlItem) + 'px'});
+        var ReviewsOwlItem = $('.reviews-carousel .owl-item').width();
+        $('.reviews-carousel .owl-nav').css({ 'width': (ReviewsOwlItem) + 'px' });
 
-      var TestimonialsOwlItem = $('.testimonials-carousel .owl-item').width();
-      $('.testimonials-carousel .owl-nav').css({'width' : (TestimonialsOwlItem) + 'px'});
+        var TestimonialsOwlItem = $('.testimonials-carousel .owl-item').width();
+        $('.testimonials-carousel .owl-nav').css({ 'width': (TestimonialsOwlItem) + 'px' });
     }
 
     $(window).on("resize", ReviewsNavResize);
@@ -90,17 +90,49 @@
 
     // HREF LINKS
     $('a[href*="#"]').click(function (event) {
-      if (
-        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-        if (target.length) {
-          event.preventDefault();
-          $('html, body').animate({
-            scrollTop: target.offset().top - 74
-          }, 1000);
+        if (
+            location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                event.preventDefault();
+                $('html, body').animate({
+                    scrollTop: target.offset().top - 74
+                }, 1000);
+            }
         }
-      }
     });
-    
+
+    // Scroll to Top Button
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    if (scrollToTopBtn) { // التحقق من وجود العنصر
+        // إخفاء الزر عند تحميل الصفحة
+        scrollToTopBtn.style.display = "none";
+
+        // إظهار الزر عند التمرير لأسفل
+        window.onscroll = function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "flex"; // إظهار الزر
+            } else {
+                scrollToTopBtn.style.display = "none"; // إخفاء الزر
+            }
+        };
+
+        // العودة إلى الأعلى عند النقر على الزر
+        scrollToTopBtn.addEventListener("click", () => {
+            document.body.scrollTop = 0; // للمتصفحات القديمة
+            document.documentElement.scrollTop = 0; // للمتصفحات الحديثة
+        });
+    }
+
+    // Preloader
+    window.addEventListener('load', function () {
+        setTimeout(function () {
+            document.getElementById('preloader-container').style.opacity = '0';
+            setTimeout(function () {
+                document.getElementById('preloader-container').style.display = 'none';
+            }, 500); // نفس مدة التلاشي في CSS (500 ميلي ثانية)
+        }, 3000);
+    });
 })(window.jQuery);
