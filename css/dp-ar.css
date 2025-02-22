@@ -1123,5 +1123,6 @@ body {
 
 /* COPYRIGHT SECTION*/
 .highlight-name {
-    font-weight: 500; /* بارز قليلاً */
+    font-weight: 600; /* بارز قليلاً */
+    font-size: 1.05em; /* زيادة طفيفة في حجم الخط (اختياري) */
 }
