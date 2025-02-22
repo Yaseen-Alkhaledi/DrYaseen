@@ -1120,3 +1120,8 @@ body {
     transform: rotateZ(-460deg) rotateX(-60deg) rotateY(60deg);
   }
 }
+
+/* COPYRIGHT SECTION*/
+.highlight-name {
+    font-weight: 500; /* بارز قليلاً */
+}
