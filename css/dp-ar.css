@@ -1123,6 +1123,18 @@ body {
 
 /* COPYRIGHT SECTION*/
 .highlight-name {
-    font-weight: 600; /* بارز قليلاً */
-    font-size: 1.05em; /* زيادة طفيفة في حجم الخط (اختياري) */
+    font-weight: 600 !important; /* بارز قليلاً */
+    font-size: 1.05em !important; /* زيادة طفيفة في حجم الخط */
+    color: inherit !important; /* التأكد من أن اللون لا يتغير */
+}
+
+/* تنسيق حقوق النشر */
+.copyright-text {
+    font-size: var(--menu-font-size); /* حجم الخط الافتراضي */
+    color: var(--p-color); /* لون النص الافتراضي */
+    text-align: right; /* محاذاة النص إلى اليمين */
+}
+
+.copyright-text span:not(.highlight-name) {
+    font-weight: var(--font-weight-normal); /* وزن الخط العادي للنصوص الأخرى */
 }
