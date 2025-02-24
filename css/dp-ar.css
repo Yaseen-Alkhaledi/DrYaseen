@@ -742,38 +742,6 @@ b, strong {
 }
 
 /*---------------------------------------
-  SOCIAL ICON SECTION              
------------------------------------------*/
-.social-icon {
-  margin: 0;
-  padding: 0;
-}
-
-.social-icon li {
-  list-style: none;
-  display: inline-block;
-  vertical-align: top;
-  transition: all 0.3s;
-}
-
-.social-icon:hover li:not(:hover) {
-  opacity: 0.65;
-}
-
-.social-icon-link {
-  font-size: var(--p-font-size);
-  display: inline-block;
-  vertical-align: top;
-  margin-top: 4px;
-  margin-bottom: 4px;
-  margin-right: 15px;
-}
-
-.social-icon-link:hover {
-  color: var(--primary-color);
-}
-
-/*---------------------------------------
   RESPONSIVE STYLES              
 -----------------------------------------*/
 @media screen and (min-width: 1600px) {
@@ -1121,7 +1089,158 @@ body {
   }
 }
 
-/* COPYRIGHT SECTION*/
+/*---------------------------------------
+  SOCIAL MEDIA SECTION              
+-----------------------------------------*/
+/* توجيه النص من اليمين إلى اليسار */
+body[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+/* تنسيق العنوان مع الخط */
+#contact h2 {
+  text-align: center;
+  position: relative;
+  padding-bottom: 10px; /* مسافة بين النص والخط */
+}
+
+#contact h2::after {
+  content: '';
+  display: block;
+  width: 50px; /* طول الخط */
+  height: 2px; /* سمك الخط */
+  background-color: #247cff; /* لون الخط (بنفس لون الأيقونة) */
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%); /* توسيط الخط */
+}
+
+/* تنسيق الجملة */
+#contact p {
+  text-align: center;
+  color: #666; /* لون النص */
+  font-size: 1rem;
+  margin-bottom: 20px; /* مسافة بين الجملة والمربع */
+}
+
+/* تنسيق المربع */
+.info-box, .form-box {
+  background-color: #f9f9f9; /* لون خلفية المربع */
+  border: 1px solid #e0e0e0; /* حدود المربع */
+  border-radius: 10px; /* زوايا مدورة */
+  padding: 20px; /* مسافة داخلية */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل */
+  margin-bottom: 30px; /* مسافة بين المربع والنموذج */
+}
+
+/* تنسيق الأيقونة والدائرة المتقطعة */
+.bi-envelope {
+  font-size: 1.5rem; /* تصغير حجم الأيقونة */
+  color: #247cff; /* لون الأيقونة */
+  border: 2px dotted #247cff; /* دائرة متقطعة بنفس لون الأيقونة */
+  border-radius: 50%; /* لجعلها دائرية */
+  padding: 10px; /* إضافة مسافة داخلية */
+  width: 50px; /* إضافة عرض ثابت */
+  height: 50px; /* إضافة ارتفاع ثابت */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* تنسيق أيقونات التواصل الاجتماعي */
+.social-icon {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* مسافة بين الأيقونات */
+  margin-top: 20px; /* مسافة من الأعلى */
+}
+
+.social-icon li {
+  background-color: #f9f9f9; /* لون خلفية الأيقونات */
+  border: 1px solid #e0e0e0; /* حدود الأيقونات */
+  border-radius: 50%; /* جعلها دائرية */
+  width: 40px; /* حجم الأيقونة */
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل */
+  transition: all 0.3s ease; /* تأثير عند التمرير */
+}
+
+.social-icon li:hover {
+  transform: translateY(-5px); /* تحريك الأيقونة لأعلى عند التمرير */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* زيادة الظل عند التمرير */
+}
+
+.social-icon li a {
+  color: #247cff; /* لون الأيقونة */
+  font-size: 1.2rem; /* حجم الأيقونة */
+  text-decoration: none;
+}
+
+.social-icon li a svg {
+  fill: #247cff; /* لون أيقونات SVG */
+  width: 20px; /* حجم أيقونات SVG */
+  height: 20px;
+}
+
+/* تنسيق قسم التواصل الاجتماعي */
+.social-section {
+  margin-top: 30px; /* مسافة من الأعلى */
+  text-align: center;
+}
+
+.social-section p {
+  color: #666; /* لون النص */
+  font-size: 1rem;
+  margin-bottom: 15px; /* مسافة بين النص والأيقونات */
+}
+
+/* تنسيقات إضافية */
+.php-email-form button[type="submit"] {
+  background-color: #247cff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.php-email-form button[type="submit"]:hover {
+  background-color: #1a5bbf;
+}
+
+/* تنسيقات رسالة النجاح */
+#success-message {
+  display: none; /* مخفي بشكل افتراضي */
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #d4edda; /* لون خلفية أخضر فاتح */
+  color: #155724; /* لون النص */
+  border: 1px solid #c3e6cb; /* حدود */
+  border-radius: 5px; /* زوايا مدورة */
+  text-align: center;
+  transition: opacity 0.5s ease; /* تأثير التلاشي */
+}
+
+.show-success {
+  display: block !important; /* إظهار الرسالة */
+  opacity: 1; /* جعلها مرئية */
+}
+
+.hide-success {
+  opacity: 0; /* إخفاء الرسالة بتلاشي */
+}
+
+/*---------------------------------------
+  COPYRIGHT SECTION            
+-----------------------------------------*/
 .highlight-name {
     font-weight: 600 !important; /* بارز قليلاً */
     font-size: 1.05em !important; /* زيادة طفيفة في حجم الخط */
