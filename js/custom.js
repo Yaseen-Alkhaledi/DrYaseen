@@ -133,7 +133,7 @@
 
     // EMAILJS INITIALIZATION
     (function () {
-        emailjs.init("_loTrX55kO3tc56ip"); // Replace with your EmailJS Public Key
+        emailjs.init("6mNErdijf3X74F_IN"); // Replace with your EmailJS Public Key
     })();
 
     // EMAIL SENDING FUNCTION
@@ -152,7 +152,7 @@
         };
 
         // Send email using EmailJS
-        emailjs.send("service_67wmxby", "template_g72nnkc", formData)
+        emailjs.send("service_0bkl8hb", "template_9g2x8oi", formData)
             .then(function (response) {
                 // Show success message
                 const successMessage = document.getElementById('success-message');
