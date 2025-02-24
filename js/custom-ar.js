@@ -137,7 +137,7 @@
 
     // EMAILJS INITIALIZATION
     (function () {
-        emailjs.init("_loTrX55kO3tc56ip"); // استبدل بالـ Public Key الخاص بك
+        emailjs.init("6mNErdijf3X74F_IN"); // استبدل بالـ Public Key الخاص بك
     })();
 
     // EMAIL SENDING FUNCTION
@@ -156,7 +156,7 @@
         };
 
         // إرسال البريد الإلكتروني
-        emailjs.send("service_67wmxby", "template_g72nnkc", formData)
+        emailjs.send("service_0bkl8hb", "template_9g2x8oi", formData)
             .then(function (response) {
                 // إظهار رسالة النجاح
                 const successMessage = document.getElementById('success-message');
